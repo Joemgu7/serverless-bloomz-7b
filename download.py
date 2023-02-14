@@ -7,7 +7,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def download_model():
     model_name = "bigscience/bloomz-7b1"
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', load_in_8bit=True)
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 if __name__ == "__main__":

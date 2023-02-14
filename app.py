@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 def init():
     global model, tokenizer
     model_name = "bigscience/bloomz-7b1"
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', load_in_8bit=True)
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # Inference is ran for every server call
