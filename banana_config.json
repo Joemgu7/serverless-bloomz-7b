@@ -1,0 +1,11 @@
+{
+    "name": "Bloomz 7B",
+    "category": "Natural Language",
+    "example_input": {
+        "prompt": "Original: Je t'aime. Translated:"
+    },
+    "example_output": {
+        "output": "I love you."
+    },
+    "version": "1"
+  }
